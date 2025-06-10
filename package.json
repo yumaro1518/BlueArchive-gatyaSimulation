@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-  "start": "node server/index.js",
-  "dev": "nodemon server/index.js",
-  "build": "cd frontend && npm run build && cp -r dist/* ../public/"
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js",
+    "build": "cd frontend && npm run build && cp -r dist/* ../public/"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +14,8 @@
   "dependencies": {
     "cors": "^2.8.5",
     "ejs": "^3.1.10",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "html2canvas": "^1.4.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"

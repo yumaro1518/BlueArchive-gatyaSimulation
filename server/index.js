@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const gachaLogic = require('./gatyaLogic');
+const gachaLogic = require('./gachaLogic');
 
 const app = express();
 const PORT = 3000;
