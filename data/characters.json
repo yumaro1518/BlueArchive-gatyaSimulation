@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "アリス",
+    "image": "/images/alice.png",
+    "pickup": true,
+    "limited": false,
+    "anniversary": false,
+    "permanent": true,
+    "tier": "S"
+  },
+  {
+    "id": 2,
+    "name": "ヒナ",
+    "image": "/images/hina.png",
+    "pickup": false,
+    "limited": true,
+    "anniversary": true,
+    "permanent": false,
+    "tier": "A"
+  }
+]
