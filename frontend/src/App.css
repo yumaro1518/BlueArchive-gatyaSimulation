@@ -18,6 +18,48 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+/* App.css */
+
+.gacha-wrapper {
+  padding: 16px;
+  background: #f4f4f4;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.gacha-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 12px;
+}
+
+.gacha-item {
+  background: white;
+  border-radius: 8px;
+  text-align: center;
+  padding: 4px;
+}
+
+.gacha-name {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-top: 4px;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 480px) {
+  .gacha-wrapper {
+    padding: 12px;
+  }
+  .gacha-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gacha-name {
+    font-size: 0.8rem;
+  }
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
