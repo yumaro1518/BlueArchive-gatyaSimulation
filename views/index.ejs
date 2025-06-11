@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>ブルアカ風ガチャシミュ</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ブルアカ風ガチャシミュレーター</title>
+
+  <!-- SEO対策タグ -->
+  <meta name="description" content="ブルーアーカイブ風ガチャを体験できるシミュレーターアプリ！" />
+  <meta property="og:title" content="ブルアカ風ガチャシミュ" />
+  <meta property="og:description" content="推しのキャラを引こう！" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/images/ogp.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Tailwind + React ビルド後のファイル -->
+  <script type="module" src="/assets/index-*.js"></script>
+  <link rel="stylesheet" href="/assets/index-*.css" />
 </head>
-<body>
-  <h1>ガチャシミュレーター</h1>
-  <p>ここにReactアプリがマウントされます</p>
+<body class="bg-white text-gray-900">
+  <noscript>JavaScriptを有効にしてください。</noscript>
   <div id="root"></div>
-  <script src="/dist/main.js"></script>
 </body>
 </html>

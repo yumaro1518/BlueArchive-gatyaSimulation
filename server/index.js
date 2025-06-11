@@ -1,29 +1,27 @@
 const express = require('express');
 const path = require('path');
-const gachaLogic = require('./gachaLogic');
-
 const app = express();
 const PORT = 3000;
 
-// EJS設定
+// EJSテンプレート設定
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '../views'));
 
-// 静的ファイル（React & 画像）
+// 静的ファイル配信（ビルド済みReact）
 app.use(express.static(path.join(__dirname, '../public')));
 
-// トップページ表示
+// トップページルート
 app.get('/', (req, res) => {
-  const characters = require('../data/characters.json');
-  res.render('index', { characters });
+  res.render('index');  // EJSをレンダリング
 });
 
-// ガチャAPI
+// API（ガチャ用）などは今まで通り
+const gachaLogic = require('./gachaLogic');
 app.get('/api/gacha/:type', (req, res) => {
   const result = gachaLogic.drawGacha(req.params.type);
   res.json(result);
 });
 
 app.listen(PORT, () => {
-  console.log(`Server started on http://localhost:${PORT}`);
+  console.log(`Server running: http://localhost:${PORT}`);
 });
