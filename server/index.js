@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
   res.render('index');  // EJSをレンダリング
 });
 
-// API（ガチャ用）などは今まで通り
+// API（ガチャ用）などは今まで通りである
 const gachaLogic = require('./gachaLogic');
 app.get('/api/gacha/:type', (req, res) => {
   const result = gachaLogic.drawGacha(req.params.type);
